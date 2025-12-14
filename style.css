@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;  
+    overflow-x: hidden;
+
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.btn {
+    font-size: 1.7rem;
+    display: inline-block;
+    background-color: #ff6e01;
+    color: white;
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 5rem;
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.btn:hover {
+    scale: 1.1;
+}
+
+section {
+    padding: 8rem 7%;
+}
+
+.header {
+    position: fixed;
+    width: 100;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.header .logo i {
+    color: #ff6e01;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: black;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    color: #ff6e01;
+}
+
+.header .icons div {
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: black;
+}
+
+.header .icons div:hover {
+    color: #ff6e01;
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* Login Form */
+.header .login-form {
+    position: absolute;
+    top: 115%;
+    right: -150%;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+    width: 35rem;
+    padding: 2rem;
+}
+
+.header .login-form.active {
+    right: 2rem;
+    transition: 0.4s linear;
+}
+
+.header .login-form h3 {
+    font-size: 2.2rem;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+.header .login-form .box {
+    font-size: 1.5rem;
+    padding: 1rem 1.2rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    margin: 0.7rem 0;
+    color: black;
+    width: 100%;
+    text-transform: none;
+}
+
+.header .login-form .remember {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.7rem 0;
+}
+
+.header .login-form .remember label {
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.header .login-form .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Main Page */
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    color: white;
+    font-size: 6rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+@media (max-width: 991px){
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 8rem 2rem;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 0.1rem solid #ff6e01;
+        clip-path: polygon(0 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    .home {
+        background-color: left;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 450px){
+    html {
+        font-size: 50%;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+}
